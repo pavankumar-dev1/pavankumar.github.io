@@ -3,6 +3,7 @@
 <head>
 <title>Pavan Kumar | Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
   margin: 0;
@@ -10,13 +11,19 @@ body {
   background: #0f172a;
   color: white;
 }
-section {
-  padding: 60px 20px;
+
+header {
   text-align: center;
+  padding: 80px 20px;
 }
-h1 { font-size: 48px; }
-h2 { margin-bottom: 20px; }
-p { color: #94a3b8; }
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  color: #94a3b8;
+}
 
 .btn {
   display: inline-block;
@@ -26,6 +33,13 @@ p { color: #94a3b8; }
   color: black;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .projects {
@@ -33,21 +47,39 @@ p { color: #94a3b8; }
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
 }
+
 .card {
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
 }
 </style>
 </head>
 
 <body>
 
-<section>
+<header>
 <h1>Hi, I'm Pavan Kumar 🚀</h1>
 <p>BCA Student | Developer | YouTuber</p>
+
 <a class="btn" href="#">Download Resume</a>
 <a class="btn" href="https://github.com/pavankumar-dev1">GitHub</a>
+</header>
+
+<section>
+<h2>About Me</h2>
+<p>I am a BCA student passionate about web development and building real-world projects. I enjoy solving problems and continuously improving my skills.</p>
 </section>
 
 <section>
@@ -56,13 +88,13 @@ p { color: #94a3b8; }
 
 <div class="card">
 <h3>Project 1</h3>
-<p>Describe your project here</p>
+<p>Short description of your project</p>
 <a href="#">GitHub</a>
 </div>
 
 <div class="card">
 <h3>Project 2</h3>
-<p>Describe your project here</p>
+<p>Short description of your project</p>
 <a href="#">GitHub</a>
 </div>
 
@@ -76,8 +108,12 @@ p { color: #94a3b8; }
 
 <section>
 <h2>Contact</h2>
-<p>Email: your@email.com</p>
+<p>Email:shettypavan082@gmail.com</p>
 </section>
+
+<footer>
+<p>© 2026 Pavan Kumar</p>
+</footer>
 
 </body>
 </html>
