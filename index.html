@@ -2,264 +2,162 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Pavan Kumar — Developer</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<title>Pavan Kumar — Full-Stack Developer</title>
+
+<meta name="description" content="Full-stack developer building AI assistants, Android apps, and real-time systems. Open to internships."/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"/>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
+  margin:0;
   font-family:Inter,sans-serif;
-  background:#0b0f1a;
-  color:#e5e7eb;
-  overflow-x:hidden;
-}
-
-/* BACKGROUND GLOW */
-.bg{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:
-    radial-gradient(circle at 20% 20%,rgba(99,102,241,.2),transparent 40%),
-    radial-gradient(circle at 80% 80%,rgba(6,182,212,.15),transparent 40%);
-  z-index:-2;
-}
-
-/* CURSOR LIGHT */
-.glow{
-  position:fixed;
-  width:300px;
-  height:300px;
-  background:radial-gradient(circle,rgba(99,102,241,.2),transparent 60%);
-  border-radius:50%;
-  pointer-events:none;
-  transform:translate(-50%,-50%);
-  z-index:-1;
-}
-
-/* LAYOUT */
-.container{max-width:1100px;margin:auto;padding:40px 20px}
-
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:80px;
-}
-
-nav a{
-  margin-left:20px;
-  color:#9ca3af;
-  text-decoration:none;
-  transition:.3s;
-}
-nav a:hover{color:#fff}
-
-/* HERO */
-.hero{
-  text-align:center;
-  margin-top:60px;
-}
-
-.hero h1{
-  font-size:64px;
-  font-weight:700;
-  background:linear-gradient(90deg,#6366f1,#06b6d4);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-  max-width:600px;
-  margin:20px auto;
-  color:#9ca3af;
-  font-size:18px;
-}
-
-.btn{
-  display:inline-block;
-  padding:12px 22px;
-  background:#6366f1;
-  border-radius:10px;
-  margin-top:20px;
-  text-decoration:none;
+  background:#050816;
   color:#fff;
-  transition:.3s;
 }
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 35px rgba(99,102,241,.5);
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
 }
-
-/* SECTION */
-.section{margin-top:100px}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+h1{
+  font-size:64px;
+  margin:0;
 }
-
-/* FEATURED PROJECT */
-.featured{
-  padding:30px;
-  border-radius:16px;
-  background:linear-gradient(135deg,#1f2937,#111827);
-  border:1px solid rgba(255,255,255,.08);
-  margin-bottom:30px;
+h2{
+  font-size:32px;
 }
-
-/* CARDS */
-.card{
-  padding:20px;
-  border-radius:14px;
-  background:#111827;
-  border:1px solid rgba(255,255,255,.05);
-  transition:.3s;
+p{
+  color:#94a3b8;
+  line-height:1.6;
 }
-.card:hover{
-  transform:translateY(-8px);
-  border-color:#6366f1;
-  box-shadow:0 25px 50px rgba(0,0,0,.5);
-}
-
-/* TAGS */
-.tags span{
+.btn{
+  padding:12px 20px;
+  border-radius:8px;
+  border:1px solid #333;
+  margin-right:10px;
+  text-decoration:none;
+  color:white;
   display:inline-block;
-  margin:5px;
-  padding:4px 10px;
-  font-size:12px;
-  background:#1f2937;
-  border-radius:20px;
 }
-
-/* FADE ANIMATION */
-.fade{
-  opacity:0;
-  transform:translateY(40px);
-  transition:.8s ease;
+.primary{
+  background:linear-gradient(135deg,#7c3aed,#06b6d4);
+  border:none;
 }
-.fade.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-footer{
-  text-align:center;
+.section{
   margin-top:100px;
-  padding:30px;
-  color:#6b7280;
+}
+.card{
+  background:#0c1228;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="bg"></div>
-<div class="glow" id="glow"></div>
-
 <div class="container">
 
-<header>
-<h3>Pavan.</h3>
-<nav>
-<a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+<!-- HERO -->
+<section>
 
-<section class="hero fade">
-<h1>Pavan Kumar</h1>
-<p>Building AI systems, Android apps, and real-time platforms focused on performance, scalability, and real-world impact.</p>
-<a href="https://github.com/pavankumar-dev1" class="btn">View GitHub</a>
+<h1>Pavan Kumar.</h1>
+
+<p>
+Full-stack developer building <strong>AI assistants, Android apps, and real-time systems</strong>.
+<br><br>
+Built <strong>5+ production-style projects</strong> including:
+<br>
+• AI Assistant (SAKHI)  
+• Real-time Chat App  
+• Cybersecurity Toolkit  
+<br><br>
+<strong>Open to internships and ready to contribute immediately.</strong>
+</p>
+
+<div>
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="resume.pdf" class="btn">Resume</a>
+<a href="https://github.com/pavankumar-dev1" class="btn">GitHub</a>
+</div>
+
 </section>
 
-<section id="projects" class="section fade">
+<!-- ABOUT -->
+<section class="section">
+<h2>About</h2>
+
+<p>
+I’m a BCA student focused on building real-world systems using Django, Kotlin, and AI APIs.
+</p>
+
+<p><strong>Actively seeking software development internships.</strong></p>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+
 <h2>Projects</h2>
 
-<div class="featured">
+<div class="card">
 <h3>SAKHI — AI Assistant</h3>
-<p>JARVIS-style assistant with Django backend and Android app using multi-model AI pipeline.</p>
-<div class="tags">
-<span>Django</span><span>Kotlin</span><span>AI</span>
+<p>
+Built a real-time AI assistant using Django backend and Android client with a multi-model pipeline (Gemini + Groq).
+Supports voice interaction, persistent memory, and background services.
+</p>
 </div>
-</div>
-
-<div class="grid">
 
 <div class="card">
 <h3>CyberShield</h3>
-<p>Cybersecurity toolkit with phishing detection and password analysis.</p>
+<p>
+Client-side cybersecurity toolkit with phishing detection, password analysis, and risk dashboard.
+</p>
 </div>
 
 <div class="card">
 <h3>WhatsApp Clone</h3>
-<p>Real-time chat app with WebRTC and WebSockets.</p>
+<p>
+Real-time chat app using Django Channels and Kotlin Android with messaging and media support.
+</p>
 </div>
 
 <div class="card">
 <h3>EarlyCropGuard</h3>
-<p>AI crop advisory system using weather data.</p>
-</div>
-
-<div class="card">
-<h3>InsaneCalculator</h3>
-<p>Android calculator with custom parser.</p>
-</div>
-
-<div class="card">
-<h3>College Website</h3>
-<p>Responsive multi-page website with clean UI.</p>
-</div>
-
-</div>
-</section>
-
-<section id="experience" class="section fade">
-<h2>Experience</h2>
-
-<div class="grid">
-<div class="card">BCA Student</div>
-<div class="card">YouTube Creator</div>
-<div class="card">Hackathon Developer</div>
+<p>
+Crop risk prediction system using OpenWeather API and Gemini AI for advisory.
+</p>
 </div>
 
 </section>
 
-<section id="contact" class="section fade">
+<!-- SKILLS -->
+<section class="section">
+
+<h2>Skills</h2>
+
+<p>
+Python, Django, Kotlin, Android, Firebase, WebRTC, Gemini API, Groq
+</p>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+
 <h2>Contact</h2>
+
 <p>Email: contactinsaneforenquiry@gmail.com</p>
+
+<a href="https://linkedin.com/in/pavankumar-dev" class="btn">LinkedIn</a>
+
 </section>
 
-<footer>
-© 2026 Pavan Kumar
-</footer>
-
 </div>
-
-<script>
-/* CURSOR GLOW */
-const glow=document.getElementById("glow")
-document.addEventListener("mousemove",e=>{
-  glow.style.left=e.clientX+"px"
-  glow.style.top=e.clientY+"px"
-})
-
-/* FADE ANIMATION */
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add("show")
-    }
-  })
-})
-document.querySelectorAll(".fade").forEach(el=>observer.observe(el))
-</script>
 
 </body>
 </html>
