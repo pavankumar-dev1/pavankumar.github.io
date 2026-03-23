@@ -157,7 +157,7 @@ section{padding:var(--py) 0}
 .g{background:var(--sur);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border:1px solid var(--bd);border-radius:var(--r);position:relative;overflow:hidden;transition:border-color .35s var(--ease),background .35s,box-shadow .35s}
 .g::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.055) 0%,transparent 55%);pointer-events:none}
 
-/* Tilt card - transform handled by JS */
+/* Tilt card */
 .tilt{transform-style:preserve-3d;transform:perspective(1000px)}
 
 /* Buttons */
@@ -299,6 +299,7 @@ section{padding:var(--py) 0}
 #projects{background:var(--bg2);position:relative}
 #projects::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 0%,rgba(124,58,237,.055),transparent 60%);pointer-events:none;z-index:0}
 .pjl{display:flex;flex-direction:column;gap:18px}
+/* BUG FIX: .pjf is the featured card — only 2 direct children (text div + pcode div) */
 .pjf{padding:42px 46px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
 .pfe{font-family:var(--fm);font-size:10px;letter-spacing:.15em;color:var(--am);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:6px}
 .pfe::before{content:'⭐';font-size:11px}
@@ -308,6 +309,7 @@ section{padding:var(--py) 0}
 .pflinks{display:flex;gap:10px;flex-wrap:wrap}
 .pcode{background:linear-gradient(135deg,rgba(124,58,237,.09),rgba(6,182,212,.05));border:1px solid rgba(255,255,255,.07);border-radius:13px;padding:26px;font-family:var(--fm);font-size:12.5px;line-height:1.95;color:var(--tx2)}
 .ck{color:var(--v2)}.cv{color:var(--cy)}.cst{color:#fbbf77}.cn{color:#a5f3a0}
+/* BUG FIX: .pjg is the 3-column small card grid — must wrap all small cards */
 .pjg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .pc{padding:30px}
 .pct{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
@@ -538,21 +540,21 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track" id="ticker">
     <span class="ticker-item hot">Currently building: SAKHI AI v2</span>
-    <span class="ticker-item">Python · Django · Kotlin · Firebase · WebRTC</span>
+    <span class="ticker-item">Python &middot; Django &middot; Kotlin &middot; Firebase &middot; WebRTC</span>
     <span class="ticker-item">Cisco Certified &bull; Cybersecurity Essentials &amp; Intro to Cybersecurity</span>
     <span class="ticker-item hot">New: CyberShield v2 dropping soon</span>
-    <span class="ticker-item">Hospet, Karnataka, India 🇮🇳</span>
+    <span class="ticker-item">Hospet, Karnataka, India &#x1F1EE;&#x1F1F3;</span>
     <span class="ticker-item">Cisco Certified in Cybersecurity</span>
-    <span class="ticker-item">BCA Student · Self-taught Developer</span>
-    <span class="ticker-item">Gemini API · Groq · Android · AI</span>
+    <span class="ticker-item">BCA Student &middot; Self-taught Developer</span>
+    <span class="ticker-item">Gemini API &middot; Groq &middot; Android &middot; AI</span>
     <span class="ticker-item hot">Currently building: SAKHI AI v2</span>
-    <span class="ticker-item">Python · Django · Kotlin · Firebase · WebRTC</span>
+    <span class="ticker-item">Python &middot; Django &middot; Kotlin &middot; Firebase &middot; WebRTC</span>
     <span class="ticker-item">Cisco Certified &bull; Cybersecurity Essentials &amp; Intro to Cybersecurity</span>
     <span class="ticker-item hot">New: CyberShield v2 dropping soon</span>
-    <span class="ticker-item">Hospet, Karnataka, India 🇮🇳</span>
+    <span class="ticker-item">Hospet, Karnataka, India &#x1F1EE;&#x1F1F3;</span>
     <span class="ticker-item">Cisco Certified in Cybersecurity</span>
-    <span class="ticker-item">BCA Student · Self-taught Developer</span>
-    <span class="ticker-item">Gemini API · Groq · Android · AI</span>
+    <span class="ticker-item">BCA Student &middot; Self-taught Developer</span>
+    <span class="ticker-item">Gemini API &middot; Groq &middot; Android &middot; AI</span>
   </div>
 </div>
 
@@ -572,7 +574,7 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
       <a href="https://linkedin.com/in/cyberpavankumar" target="_blank" rel="noopener noreferrer me" class="n-li" aria-label="LinkedIn profile" title="LinkedIn">
         <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
-      <div class="ncw"><a href="/cdn-cgi/l/email-protection#91f2feffe5f0f2e5f8ffe2f0fff4f7fee3f4ffe0e4f8e3e8d1f6fcf0f8fdbff2fefc" class="nc">Hire Me &rarr;</a></div>
+      <div class="ncw"><a href="mailto:contactinsaneforenquiry@gmail.com" class="nc">Hire Me &rarr;</a></div>
     </div>
     <button class="ntog" id="ntog" aria-expanded="false" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -667,7 +669,6 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
         <p class="bt">I also run <strong>Insane Pavan</strong> on YouTube &mdash; a gaming channel where I upload Minecraft videos and gaming content. Outside of that, I spend my time on on-device AI experiments, ethical hacking with Kali Linux, and Android system internals.</p>
       </div>
       <div class="g bav rv d2">
-        <!-- PHOTO: replace the SVG below with <img src="your-photo.jpg" alt="Pavan Kumar" class="av-photo"/> -->
         <div class="av-photo-wrap" aria-label="Pavan Kumar photo">
           <div class="avr"><div class="avi">
             <svg viewBox="0 0 132 132" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true">
@@ -728,7 +729,15 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
   <div class="w">
     <p class="stag rv">Projects</p>
     <h2 class="sh rv" id="pj-h">Things I&rsquo;ve <span>built</span>.</h2>
+
     <div class="pjl">
+
+      <!-- =============================================
+           BUG FIX 1 + 2: SAKHI featured card is now
+           properly self-contained with exactly 2 grid
+           children (text div + pcode div), then closed.
+           The .pjg small-cards wrapper is added below.
+      ============================================= -->
       <article class="g pjf rvs tilt">
         <div>
           <p class="pfe">Featured Project</p>
@@ -741,10 +750,11 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
           <div class="pflinks">
             <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="btn bp" aria-label="SAKHI source code">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Source Code</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn bg btn-live" aria-label="SAKHI live demo" data-tip="Coming soon">
+            <a href="#" class="btn bg btn-live" aria-label="SAKHI live demo" data-tip="Coming soon">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
           </div>
         </div>
+        <!-- Second grid child: code snippet -->
         <div class="pcode" aria-hidden="true">
           <div><span class="ck">class</span> <span class="cn">SAKHIAssistant</span><span style="color:rgba(255,255,255,.18)">:</span></div>
           <div style="margin-left:18px"><span class="ck">ai_chain</span> <span style="color:var(--tx3)">=</span> <span class="cst">["Gemini","Groq"]</span></div>
@@ -753,62 +763,78 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
           <div style="margin-left:18px"><span class="ck">platform</span> <span style="color:var(--tx3)">=</span> <span class="cst">"Android + Cloud"</span></div>
           <div style="margin-left:18px"><span class="ck">status</span> <span style="color:var(--tx3)">=</span> <span style="color:#22c55e">&#x2714;&nbsp;active</span></div>
         </div>
-<article class="g pc rv d1 tilt">
-  <div class="pct">
-    <div class="pci" aria-hidden="true">&#x1F6E1;&#xFE0F;</div>
-    <div class="pca">
+      </article>
+      <!-- END SAKHI featured card -->
 
-      <a href="https://github.com/pavankumar-dev1/cybershield" target="_blank" rel="noopener noreferrer" class="pcb" aria-label="CyberShield code" data-tip="Source Code">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.810 1.096.810 2.220 0 1.606-.015 2.896-.015 3.286 0 .315.210.690.825.570C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-        </svg>
-        Code
-      </a>
+      <!-- =============================================
+           BUG FIX 2: .pjg wrapper now correctly wraps
+           all small project cards.
+           BUG FIX 3: Card 1 is now CyberShield (icon,
+           links, title and description all match).
+           BUG FIX 4: Malformed comment restructured —
+           EarlyCropGuard removed cleanly, InsaneCalculator
+           now has its own correct icon and markup.
+      ============================================= -->
+      <div class="pjg">
 
-      <a href="https://cybershield-3m6r.onrender.com" target="_blank" class="pcb pcb-live" data-tip="Live Demo">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/>
-          <line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-        Live
-      </a>
+        <!-- Card 1: CyberShield -->
+        <article class="g pc rv d1 tilt">
+          <div class="pct">
+            <div class="pci" aria-hidden="true">&#x1F6E1;&#xFE0F;</div>
+            <div class="pca">
+              <a href="https://github.com/pavankumar-dev1/cybershield" target="_blank" rel="noopener noreferrer" class="pcb" aria-label="CyberShield source code" data-tip="Source Code">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code
+              </a>
+              <a href="https://cybershield-3m6r.onrender.com" target="_blank" rel="noopener noreferrer" class="pcb pcb-live" data-tip="Live Demo">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live
+              </a>
+            </div>
+          </div>
+          <h3 class="pcti">CyberShield</h3>
+          <p class="pcd">Client-side cybersecurity web app with 6 modules: Digital Footprint Checker, Password Analyzer, Phishing Detector, App Permission Analyzer, Wi-Fi Risk Indicator, and Cyber Risk Dashboard.</p>
+          <div class="pctags"><span class="tsm">HTML</span><span class="tsm">CSS</span><span class="tsm">JavaScript</span><span class="tsm">Security</span></div>
+        </article>
 
-    </div>
-  </div>
+        <!-- Card 2: WhatsApp Clone -->
+        <article class="g pc rv d2 tilt">
+          <div class="pct">
+            <div class="pci" aria-hidden="true">&#x1F4AC;</div>
+            <div class="pca">
+              <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="pcb" aria-label="WhatsApp Clone source code" data-tip="Source Code">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code
+              </a>
+            </div>
+          </div>
           <h3 class="pcti">WhatsApp Clone</h3>
           <p class="pcd">Full-stack messaging app &mdash; Kotlin Android + Django Channels. Real-time chat, WebRTC video calls, group chats, status, and media sharing.</p>
           <div class="pctags"><span class="tsm">Kotlin</span><span class="tsm">Django Channels</span><span class="tsm">WebRTC</span></div>
         </article>
+
+        <!-- Card 3: InsaneCalculator -->
         <article class="g pc rv d3 tilt">
-          <div class="pct"><div class="pci" aria-hidden="true">&#x1F33E;</div>
+          <div class="pct">
+            <div class="pci" aria-hidden="true">&#x1F5A9;</div>
             <div class="pca">
-              <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="pcb" data-tip="Source Code">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
+              <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="pcb" aria-label="InsaneCalculator source code" data-tip="Source Code">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code
+              </a>
             </div>
           </div>
-          <!--
-          <h3 class="pcti">EarlyCropGuard</h3>
-          <p class="pcd">Hackathon project for crop risk prediction. OpenWeather API + Gemini AI for natural-language advisory for Indian farmers.</p>
-          <div class="pctags"><span class="tsm">Django</span><span class="tsm">Gemini AI</span><span class="tsm">OpenWeather</span></div>
-        </article>
-        <article class="g pc rv d1 tilt">
-          <div class="pct"><div class="pci" aria-hidden="true">&#x1F5A9;</div>
-            <div class="pca">
-              <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="pcb" data-tip="Source Code">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
-            </div>
-          </div>-->
           <h3 class="pcti">InsaneCalculator</h3>
           <p class="pcd">Production Android calculator &mdash; Midnight Pro dark theme, glassmorphism, custom recursive descent expression parser, history &amp; animations.</p>
           <div class="pctags"><span class="tsm">Kotlin</span><span class="tsm">Android</span><span class="tsm">Custom Parser</span></div>
         </article>
-        <article class="g pc pcmore rv d2" aria-label="More projects">
+
+        <!-- Card 4: More on GitHub -->
+        <article class="g pc pcmore rv d1" aria-label="More projects">
           <div style="font-size:28px" aria-hidden="true">&#x1F680;</div>
           <p style="font-family:var(--fm);font-size:11px;color:var(--tx3);letter-spacing:.08em">More on GitHub</p>
           <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="btn bg" style="font-size:11px;padding:7px 16px">Explore &rarr;</a>
         </article>
+
       </div>
+      <!-- END .pjg -->
+
     </div>
   </div>
 </section>
@@ -860,7 +886,8 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
           <div class="ex-dl-item"><div class="ex-dl-dot" style="background:var(--am)"></div>Hackathon participant</div>
           <div class="ex-dl-item"><div class="ex-dl-dot" style="background:var(--gr)"></div>Open to freelance &amp; full-time 2026</div>
         </div>
-        <a href="Pavan.pdf" download="Pavan_Kumar_Resume.pdf" id="res-btn" class="btn bp" style="font-size:11.5px;padding:10px 20px" aria-label="Download resume">
+        <!-- BUG FIX (minor): Standardised resume filename to resume.pdf -->
+        <a href="resume.pdf" download="Pavan_Kumar_Resume.pdf" id="res-btn" class="btn bp" style="font-size:11.5px;padding:10px 20px" aria-label="Download resume">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download CV</a>
       </div>
       <div class="ex-timeline">
@@ -904,7 +931,6 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
     </div>
   </div>
 </section>
-
 
 <!-- CERTIFICATIONS -->
 <section id="certs" aria-labelledby="cert-h">
@@ -960,9 +986,9 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
       <div class="rv">
         <p>Open to freelance projects, collaborations, brand sponsorships for my YouTube channel, and full-time roles from 2026. Based in Hospet, Karnataka. I reply within 24 hours.</p>
         <div class="ctis">
-          <a href="/cdn-cgi/l/email-protection#03606c6d776260776a6d70626d66656c71666d72766a717a43646e626a6f2d606c6e" class="cti" aria-label="Email Pavan Kumar">
+          <a href="mailto:contactinsaneforenquiry@gmail.com" class="cti" aria-label="Email Pavan Kumar">
             <div class="ctii iv" aria-hidden="true">&#x2709;&#xFE0F;</div>
-            <div><div class="ctl2">Email</div><div class="ctv"><span class="__cf_email__" data-cfemail="dfbcb0b1abbebcabb6b1acbeb1bab9b0adbab1aeaab6ada69fb8b2beb6b3f1bcb0b2">[email&#160;protected]</span></div></div>
+            <div><div class="ctl2">Email</div><div class="ctv">contactinsaneforenquiry@gmail.com</div></div>
           </a>
           <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="cti" aria-label="GitHub">
             <div class="ctii ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
@@ -1002,7 +1028,7 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
               <option value="other">Other</option>
             </select>
           </div>
-          <div class="ff"><label for="fm">Message *</label><textarea id="fm" name="message" placeholder="Tell me about your project or opportunity&hellip;" required></textarea></div>
+          <div class="ff"><label for="fmsg-ta">Message *</label><textarea id="fmsg-ta" name="message" placeholder="Tell me about your project or opportunity&hellip;" required></textarea></div>
           <button type="submit" class="btn bp" id="fsub" style="width:100%;justify-content:center">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             <span id="fsbt">Send Message</span>
@@ -1026,7 +1052,7 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
       <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer me" class="ftl">GitHub</a>
       <a href="https://linkedin.com/in/cyberpavankumar" target="_blank" rel="noopener noreferrer me" class="ftl">LinkedIn</a>
       <a href="https://youtube.com/@InsaneGamingbypavan" target="_blank" rel="noopener noreferrer" class="ftl">YouTube</a>
-      <a href="/cdn-cgi/l/email-protection#4c2f2322382d2f3825223f2d22292a233e29223d39253e350c2b212d2520622f2321" class="ftl" id="email-copy" data-tip="Click to copy email">Email</a>
+      <a href="mailto:contactinsaneforenquiry@gmail.com" class="ftl" id="email-copy" data-tip="Click to copy email">Email</a>
     </nav>
   </div>
 </footer>
@@ -1035,7 +1061,7 @@ footer{border-top:1px solid var(--bd);padding:32px 24px;position:relative;z-inde
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
 'use strict';
 
@@ -1047,10 +1073,10 @@ loader.querySelector('.ld-fill').addEventListener('animationend',function(){
   setTimeout(function(){
     document.body.classList.add('loaded');
     loader.addEventListener('transitionend',function(){loader.remove();},{once:true});
-    startCounters();
     startTypewriter();
     startTerminalTyping();
     startHeroCanvas();
+    startCounters();
   },180);
 });
 
@@ -1068,7 +1094,7 @@ function toast(msg,type,dur){
   requestAnimationFrame(function(){requestAnimationFrame(function(){t.classList.add('show');});});
   setTimeout(function(){t.classList.remove('show');setTimeout(function(){t.remove();},500);},dur||3500);
 }
-window.setTimeout(function(){toast('Try the Konami Code for a surprise! ↑↑↓↓←→←→BA','info',5000);},3000);
+setTimeout(function(){toast('Try the Konami Code for a surprise! ↑↑↓↓←→←→BA','info',5000);},3000);
 
 // ─────────────────────────────────────────
 // CURSOR
@@ -1086,7 +1112,7 @@ function startHeroCanvas(){
   if(!canvas)return;
   var ctx=canvas.getContext('2d');
   var W,H,particles=[];
-  var mouse={x:W/2,y:H/2};
+  var mouse={x:0,y:0};
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;mouse.x=W/2;mouse.y=H/2;}
   resize();
   window.addEventListener('resize',resize,{passive:true});
@@ -1175,9 +1201,9 @@ function startTerminalTyping(){
     div.className='tl';
     if(l.cursor){
       div.innerHTML='<span class="tpr">&gt;</span><span>&nbsp;</span><span class="tc"></span>';
-    } else if(l.prompt){
+    }else if(l.prompt){
       div.innerHTML='<span class="tpr">&gt;</span><span class="tn">'+l.text+'</span>';
-    } else {
+    }else{
       div.innerHTML='<span style="display:inline-block;min-width:14px"></span><span>'+l.html+'</span>';
     }
     body.appendChild(div);
@@ -1188,10 +1214,10 @@ function startTerminalTyping(){
 }
 
 // ─────────────────────────────────────────
-// COUNTER ANIMATION
+// COUNTER ANIMATION (hero section only, once)
 // ─────────────────────────────────────────
 function startCounters(){
-  document.querySelectorAll('[data-count]').forEach(function(el){
+  document.querySelectorAll('#hero [data-count]').forEach(function(el){
     var target=parseInt(el.dataset.count);
     var suffix=el.dataset.suffix||'';
     var start=0,dur=1800,step=16;
@@ -1249,7 +1275,7 @@ tog.addEventListener('click',function(){var o=nls.classList.toggle('op');tog.cla
 nls.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nls.classList.remove('op');tog.classList.remove('op');tog.setAttribute('aria-expanded','false');});});
 
 // ─────────────────────────────────────────
-// SCROLL REVEAL
+// SCROLL REVEAL (with per-section counter anim)
 // ─────────────────────────────────────────
 var io=new IntersectionObserver(function(entries){
   entries.forEach(function(e){
@@ -1260,6 +1286,7 @@ var io=new IntersectionObserver(function(entries){
       setTimeout(function(){b.classList.add('animated');},800);
     });
     e.target.querySelectorAll('[data-count]').forEach(function(el){
+      if(el.closest('#hero'))return;
       var target=parseInt(el.dataset.count),suffix=el.dataset.suffix||'',start=0,dur=1600,step=16;
       var timer=setInterval(function(){
         start+=Math.ceil(target/(dur/step));
@@ -1281,7 +1308,7 @@ document.querySelectorAll('.tilt').forEach(function(card){
     var cx=r.left+r.width/2,cy=r.top+r.height/2;
     var dx=(e.clientX-cx)/(r.width/2),dy=(e.clientY-cy)/(r.height/2);
     card.style.transform='perspective(900px) rotateX('+(-dy*6)+'deg) rotateY('+(dx*6)+'deg) scale(1.02)';
-    card.style.boxShadow='0 24px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(124,58,237,.15), '+(dx*20)+'px '+(dy*20)+'px 40px rgba(124,58,237,.07)';
+    card.style.boxShadow='0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(124,58,237,.15),'+(dx*20)+'px '+(dy*20)+'px 40px rgba(124,58,237,.07)';
   });
   card.addEventListener('mouseleave',function(){
     card.style.transform='';
@@ -1309,7 +1336,7 @@ var fsub=document.getElementById('fsub');
 var fsbt=document.getElementById('fsbt');
 var fmsg=document.getElementById('fmsg');
 function showMsg(t,cl){fmsg.textContent=t;fmsg.className='fm2 '+cl+' sh';setTimeout(function(){fmsg.classList.remove('sh');},5500);}
-form.addEventListener('submit',async function(e){
+form.addEventListener('submit',function(e){
   e.preventDefault();
   var name=form.querySelector('[name="name"]').value.trim();
   var email=form.querySelector('[name="email"]').value.trim();
@@ -1319,19 +1346,20 @@ form.addEventListener('submit',async function(e){
   if(!er.test(email)){showMsg('Please enter a valid email address.','er');return;}
   if(!msg){showMsg('Please write a message.','er');return;}
   fsub.disabled=true;fsbt.textContent='Sending\u2026';
-  try{
-    var fd=new FormData(form);
-    var res=await fetch(form.action,{method:'POST',body:fd,headers:{Accept:'application/json'}});
-    if(res.ok){
-      showMsg('\u2713 Message sent! I\'ll reply within 24 hours.','ok');
-      form.reset();fsbt.textContent='\u2713 Sent!';
-      toast('Message sent! I\'ll reply soon.','ok');
-      setTimeout(function(){fsbt.textContent='Send Message';fsub.disabled=false;},4000);
-    }else throw new Error();
-  }catch(err){
-    showMsg('Something went wrong. Please email me directly.','er');
-    fsbt.textContent='Send Message';fsub.disabled=false;
-  }
+  var fd=new FormData(form);
+  fetch(form.action,{method:'POST',body:fd,headers:{Accept:'application/json'}})
+    .then(function(res){
+      if(res.ok){
+        showMsg('\u2713 Message sent! I\'ll reply within 24 hours.','ok');
+        form.reset();fsbt.textContent='\u2713 Sent!';
+        toast('Message sent! I\'ll reply soon.','ok');
+        setTimeout(function(){fsbt.textContent='Send Message';fsub.disabled=false;},4000);
+      }else throw new Error();
+    })
+    .catch(function(){
+      showMsg('Something went wrong. Please email me directly.','er');
+      fsbt.textContent='Send Message';fsub.disabled=false;
+    });
 });
 
 // ─────────────────────────────────────────
@@ -1339,13 +1367,13 @@ form.addEventListener('submit',async function(e){
 // ─────────────────────────────────────────
 document.querySelectorAll('[download]').forEach(function(btn){
   btn.addEventListener('click',function(e){
-    if(this.getAttribute('href')==='resume.pdf'){
-      fetch('resume.pdf',{method:'HEAD'}).then(function(r){if(!r.ok)throw new Error();}).catch(function(){
+    fetch(this.getAttribute('href'),{method:'HEAD'})
+      .then(function(r){if(!r.ok)throw new Error();})
+      .catch(function(){
         e.preventDefault();
         window.open('https://github.com/pavankumar-dev1','_blank','noopener');
         toast('Resume opening on GitHub...','info');
       });
-    }
   });
 });
 
@@ -1428,6 +1456,22 @@ function launchConfetti(){
   }
   animate();
 }
+
+// ─────────────────────────────────────────
+// KONAMI CODE easter egg
+// ─────────────────────────────────────────
+var konamiSeq=[38,38,40,40,37,39,37,39,66,65];
+var konamiIdx=0;
+document.addEventListener('keydown',function(e){
+  if(e.keyCode===konamiSeq[konamiIdx]){
+    konamiIdx++;
+    if(konamiIdx===konamiSeq.length){
+      launchConfetti();
+      toast('🎉 Konami Code unlocked!','party',4000);
+      konamiIdx=0;
+    }
+  }else{konamiIdx=0;}
+});
 
 })();
 </script>
