@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Pavan Kumar — Python Developer &amp; Cybersecurity Engineer</title>
+<title>Pavan Kumar — Python Developer &amp; Cybersecurity Student</title>
 <meta name="description" content="Pavan Kumar — Python &amp; Django developer and MCA (Global) Cyber Security &amp; Ethical Hacking student at Yenepoya University, Bengaluru. Builds AI automation tools and cybersecurity platforms. BCA from Vijayanagara College, Hospet."/>
 <meta name="keywords" content="Pavan Kumar, Python developer, Django developer, cybersecurity engineer, ethical hacking student, Yenepoya University, MCA cyber security, AI automation developer, Flask developer, developer portfolio India"/>
 <meta name="author" content="Pavan Kumar"/>
@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="Pavan Kumar — Python Developer &amp; Cybersecurity Engineer"/>
 <meta name="twitter:description" content="Building AI automation and cybersecurity tools from Bengaluru, India."/>
 <meta name="twitter:image" content="https://pavankumar.tech/og-image.jpg"/>
-<meta name="theme-color" content="#0b0d10"/>
+<meta name="theme-color" content="#f8fafc"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
 <link rel="dns-prefetch" href="https://fonts.gstatic.com"/>
@@ -37,12 +37,12 @@
 ========================================================== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0b0d10;--bg2:#0e1114;--panel:#14171b;--panel-h:#181c21;
-  --line:rgba(255,255,255,.09);--line-soft:rgba(255,255,255,.045);
-  --ink:#edf1ee;--ink2:#98a29a;--ink3:#565f58;
-  --amber:#e8a33d;--amber-dim:#a9793a;--amber-glow:rgba(232,163,61,.14);
-  --teal:#5fb8ab;--teal-dim:#3d7a71;
-  --red:#e2574c;--green:#6fcf7b;
+  --bg:#f8fafc;--bg2:#f1f5f9;--panel:#ffffff;--panel-h:#f8fafc;
+  --line:rgba(15,23,42,.12);--line-soft:rgba(15,23,42,.07);
+  --ink:#111827;--ink2:#475569;--ink3:#64748b;
+  --amber:#2563eb;--amber-dim:#1d4ed8;--amber-glow:rgba(37,99,235,.12);
+  --teal:#0f766e;--teal-dim:#0f766e;
+  --red:#dc2626;--green:#16a34a;
   --fd:'Fraunces',serif;--fb:'Public Sans',sans-serif;--fm:'JetBrains Mono',monospace;
   --ease:cubic-bezier(.16,1,.3,1);
   --mw:1120px;--py:112px;--r:10px;--rs:6px;
@@ -263,6 +263,21 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
 #btt{position:fixed;bottom:26px;right:26px;width:42px;height:42px;border-radius:50%;background:var(--panel);border:1px solid var(--line);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s;z-index:400}
 #btt.show{opacity:1;pointer-events:auto}
 #btt:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+
+/* Minimal light theme overrides */
+body{background:var(--bg);color:var(--ink)}
+body::before{opacity:.16}
+.noise{opacity:.012}
+#nav{background:rgba(248,250,252,.88);border-bottom:1px solid var(--line)}
+.btn.solid{color:#fff;background:var(--amber);border-color:var(--amber)}
+.btn.solid:hover{color:#fff;background:#1d4ed8}
+.portrait{border-color:rgba(37,99,235,.22);box-shadow:0 16px 42px rgba(15,23,42,.10)}
+.portrait::after{background:linear-gradient(180deg,transparent 55%,rgba(15,23,42,.16) 100%)}
+.portrait-tag{color:#fff;background:rgba(15,23,42,.72)}
+.idphoto{border-color:rgba(37,99,235,.22);box-shadow:0 8px 24px rgba(15,23,42,.08)}
+.idcard,.panel{box-shadow:0 4px 18px rgba(15,23,42,.035)}
+::selection{background:#bfdbfe;color:#0f172a}
+
 </style>
 </head>
 <body>
@@ -295,7 +310,7 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
 <section id="hero" aria-label="Introduction">
   <div class="w hgrid">
     <div>
-      <p class="eyebrow">Session started</p>
+      <p class="eyebrow">Hello, I'm</p>
       <h1 class="hn">Pavan <span class="amber">Kumar</span></h1>
       <p class="hrole mono">Python Developer · Cybersecurity &amp; Ethical Hacking<span class="cur">▌</span></p>
 
@@ -322,7 +337,7 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
     <div class="portrait-wrap">
       <div class="portrait">
         <img src="Profile.jpg" alt="Pavan Kumar" width="380" height="380"/>
-        <span class="portrait-tag"><span class="sd" aria-hidden="true"></span>available for work</span>
+        <span class="portrait-tag"><span class="sd" aria-hidden="true"></span>building &amp; learning</span>
       </div>
     </div>
   </div>
@@ -339,22 +354,18 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
         <p>I'm <strong>Pavan Kumar</strong>, a Python &amp; Django developer currently pursuing an <strong>MCA (Global) in Cyber Security &amp; Ethical Hacking</strong> at Yenepoya (Deemed to be University), Bengaluru — after completing my <strong>BCA at Vijayanagara College, Hospet</strong>. I build things end to end: backend APIs, Android-facing services, and the security tooling that keeps them honest.</p>
         <p>Most of what I know is self-taught outside the syllabus — AI automation with the Gemini/Groq APIs, Flask-based security dashboards, and hands-on practice with Kali Linux. I also run <strong>Insane Pavan</strong> on YouTube, a gaming and tech channel, because building in public and explaining what I learn keeps the learning honest too.</p>
 
-        <div class="stats">
-          <div class="stat"><div class="n" data-count="5" data-suffix="+">0</div><div class="l">PROJECTS_SHIPPED</div></div>
-          <div class="stat"><div class="n" data-count="3" data-suffix="+">0</div><div class="l">YEARS_CODING</div></div>
-          <div class="stat"><div class="n" data-count="2" data-suffix="">0</div><div class="l">CISCO_CERTS</div></div>
-        </div>
+        <div class="tagcloud"><span class="chip">Project-based learning</span><span class="chip">Hands-on practice</span></div>
 
         <div class="edu-log">
           <div class="edu-row">
             <span class="tsx">2021–24</span>
             <div><h4>BCA — Vijayanagara College, Hospet</h4><p>Karnataka, India</p></div>
-            <span class="badge done">Completed</span>
+            <span class="badge done">Graduate</span>
           </div>
           <div class="edu-row">
             <span class="tsx">Ongoing</span>
             <div><h4>MCA (Global) — Cyber Security &amp; Ethical Hacking</h4><p>Yenepoya (Deemed to be University), Bhartiya City, Thanisandra Main Road, Bengaluru</p></div>
-            <span class="badge now">In progress</span>
+            <span class="badge now">Current</span>
           </div>
         </div>
 
@@ -373,7 +384,7 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
         <div class="idphoto"><img src="Profile.jpg" alt="Pavan Kumar" loading="lazy" width="180" height="180"/></div>
         <div class="idn">Pavan Kumar</div>
         <div class="idr mono">MCA · Cyber Security &amp; Ethical Hacking</div>
-        <div class="idrow"><span class="sd" aria-hidden="true"></span><span class="k">status</span><span>available for work</span></div>
+        <div class="idrow"><span class="sd" aria-hidden="true"></span><span class="k">status</span><span>building &amp; learning</span></div>
         <div class="idrow"><span class="k">based_in</span><span>Bengaluru, KA, IN</span></div>
         <div class="idrow"><span class="k">learning</span><span>ethical hacking, cloud</span></div>
         <div class="idrow"><span class="k">channel</span><span>@InsaneGamingbypavan</span></div>
@@ -391,16 +402,16 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
     <div class="pgrid">
 
       <article class="panel pcard feat rv d1">
-        <div class="panel-bar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="panel-title">~/sakhi — featured</span></div>
+        <div class="panel-bar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="panel-title">~/sakhi — in progress</span></div>
         <div class="pcard-body">
-          <p class="pfe">FEATURED</p>
+          <p class="pfe">WORK IN PROGRESS</p>
           <h3>SAKHI — AI Voice Assistant</h3>
-          <p>A JARVIS-inspired, AI-powered desktop voice assistant with automation and multilingual support — wake-word listening, task automation, and a Whisper/Vosk-backed speech pipeline.</p>
+          <p>A multilingual voice-assistant project exploring speech recognition, voice responses and desktop automation. Currently in development.</p>
           <div class="ptags">
             <span class="chip">Python</span><span class="chip">Speech Recognition</span><span class="chip">Whisper/Vosk</span><span class="chip">pyttsx3</span><span class="chip">Automation APIs</span>
           </div>
           <div class="plinks">
-            <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="btn solid">Source code</a>
+            <span class="chip learn">Source repository not public yet</span>
           </div>
         </div>
       </article>
@@ -409,9 +420,9 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
         <div class="panel-bar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="panel-title">~/cyber-risk-platform</span></div>
         <div class="pcard-body">
           <h3>Unified Personal Cyber Risk &amp; Privacy Analysis Platform</h3>
-          <p>A cybersecurity dashboard for password strength analysis, phishing detection, privacy scoring, and digital footprint analysis in one place.</p>
+          <p>A planned platform for personal cyber-risk checks and privacy analysis. Currently in development; this is a project concept, not a released tool.</p>
           <div class="ptags"><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">HTML/CSS/JS</span></div>
-          <div class="plinks"><a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="btn">Source code</a></div>
+          <div class="plinks"><span class="chip learn">In development</span></div>
         </div>
       </article>
 
@@ -422,7 +433,7 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
           <p>This site — a personal portfolio showcasing projects, skills, resume, and contact info, hand-built with no frameworks.</p>
           <div class="ptags"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">GitHub Pages</span></div>
           <div class="plinks">
-            <a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="btn">Source code</a>
+            <a href="https://github.com/pavankumar-dev1/vnc-bca" target="_blank" rel="noopener noreferrer" class="btn">Source code</a>
             <a href="https://pavankumar.tech/" target="_blank" rel="noopener noreferrer" class="btn">Visit site</a>
           </div>
         </div>
@@ -432,19 +443,19 @@ footer{border-top:1px solid var(--line-soft);padding:34px 0}
         <div class="panel-bar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="panel-title">~/vnc-bca-site</span></div>
         <div class="pcard-body">
           <h3>VNC BCA Website</h3>
-          <p>A college-related web application built for Vijayanagara College's BCA department.</p>
+          <p>A Flask-based content management system for the BCA department website, with database-backed content and an administration dashboard.</p>
           <div class="ptags"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
-          <div class="plinks"><a href="https://github.com/pavankumar-dev1" target="_blank" rel="noopener noreferrer" class="btn">Source code</a></div>
+          <div class="plinks"><a href="https://github.com/pavankumar-dev1/pavankumar.github.io" target="_blank" rel="noopener noreferrer" class="btn">Source code</a></div>
         </div>
       </article>
 
       <article class="panel pcard rv d3">
         <div class="panel-bar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="panel-title">~/insane-pavan</span></div>
         <div class="pcard-body">
-          <h3>YouTube — Tech &amp; Gaming Channel</h3>
-          <p>Insane Pavan: gaming content and tech videos, produced end-to-end from filming to edit to upload.</p>
-          <div class="ptags"><span class="chip">OBS Studio</span><span class="chip">CapCut</span><span class="chip">YouTube Studio</span></div>
-          <div class="plinks"><a href="https://youtube.com/@InsaneGamingbypavan" target="_blank" rel="noopener noreferrer" class="btn">Visit channel</a></div>
+          <h3>CyberShield</h3>
+          <p>A Flask-based cybersecurity toolkit featuring password analysis, phishing detection, Wi-Fi risk analysis, app-permission checks and digital-footprint scanning.</p>
+          <div class="ptags"><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Cybersecurity</span></div>
+          <div class="plinks"><a href="https://github.com/pavankumar-dev1/cybershield" target="_blank" rel="noopener noreferrer" class="btn">Source code</a></div>
         </div>
       </article>
 
